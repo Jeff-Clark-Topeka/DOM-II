@@ -16,3 +16,22 @@ const welcomeClick = document.querySelector('.intro h2');
 welcomeClick.addEventListener('dblclick', () => {
     welcomeClick.style.color = 'green';
 });
+
+const navHover = document.querySelectorAll('.nav-link');
+
+navHover.forEach(link => {
+
+    link.addEventListener('mouseenter' , (event) => {
+        event.target.style.transform = 'scale(1.2)';
+        event.target.style.color = 'blue';
+        event.target.style.transition = 'all 0.3s'
+    });
+});
+
+navHover.forEach(link => {
+    
+    link.addEventListener('mouseleave', (event) => {
+        event.target.style.transform = 'scale(1)';
+        event.target.style.color = 'black'
+    });
+});
