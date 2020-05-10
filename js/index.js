@@ -35,3 +35,15 @@ navHover.forEach(link => {
         event.target.style.color = 'black'
     });
 });
+
+const goDrag = document.querySelector('.text-content h2');
+
+goDrag.addEventListener('drag', () => {
+    goDrag.textContent = 'GO!'
+});
+
+const awaitsContextMenu = document.querySelectorAll('.text-content h2').item(1);
+
+awaitsContextMenu.addEventListener('contextmenu', (event) => {
+    event.preventDefault();
+});
