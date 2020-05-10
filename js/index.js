@@ -10,3 +10,9 @@ funBusImg.addEventListener('mouseover', () => {
 funBusImg.addEventListener('mouseout', () => {
     funBusImg.style.transform = 'scale(1.0)'
 });
+
+const welcomeClick = document.querySelector('.intro h2');
+
+welcomeClick.addEventListener('dblclick', () => {
+    welcomeClick.style.color = 'green';
+});
