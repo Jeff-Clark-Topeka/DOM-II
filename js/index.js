@@ -61,7 +61,30 @@ window.addEventListener('scroll', () => {
 });
 
 const backProp = document.querySelector('body');
+
 backProp.addEventListener('click', (event) => {
     event.target.style.backgroundColor = 'black'
     event.target.style.color = 'white' 
+});
+
+const pickProp = document.querySelector('.content-pick');
+
+pickProp.addEventListener('click', (event) => {
+    event.stopPropagation();
+    event.target.style.backgroundColor = 'grey'
+});
+
+const navProp = document.querySelector('nav');
+
+navProp.addEventListener('click', (event) => {
+    event.stopPropagation();
+});
+
+const navStopDefault = document.querySelectorAll('.nav-link');
+
+navStopDefault.forEach(link => {
+    link.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+    });
 });
